@@ -17,5 +17,5 @@ app.use('/root',require('./router/blog_root'))
 // 使用mongoodb
 require('./module/mongoose/mongoose')
 app.listen('90',()=>{
-    console.log("90端口启动成功！")
+    console.log("90端口启动成功！！！")
 })
