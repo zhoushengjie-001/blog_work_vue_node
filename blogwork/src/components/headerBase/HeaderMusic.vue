@@ -38,7 +38,7 @@ export default {
             // 获取所有的榜单数据
             // let {data} = await axios.get("api/toplist/detail")
             // 获取对应歌单/榜单详情 
-            let {data} = await axios.get("http://music.zzhitong.com/playlist/detail?id=3778678")
+            let {data} = await axios.get("/playlist/detail?id=3778678")
             // 处理数据
             this.handlerData(data.playlist.tracks)
            
@@ -47,7 +47,7 @@ export default {
         },
         // 获取音乐url地址
         async getMusicURL(url,index){
-            let {data} = await axios.get(`http://music.zzhitong.com/song/url?id=${url}`)
+            let {data} = await axios.get(`/song/url?id=${url}`)
             this.musicList[index].src = data.data[0].url
         },
         handlerData(value){
